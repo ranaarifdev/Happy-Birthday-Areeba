@@ -1,203 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday Faheem 🎉</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      overflow: hidden;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: white;
-    }
-
-    /* Gift Box */
-    .gift-box {
-      width: 120px;
-      height: 120px;
-      background: #ff3c6d;
-      position: relative;
-      border-radius: 10px;
-      cursor: pointer;
-      animation: bounce 1.5s infinite;
-    }
-    .gift-box:before, .gift-box:after {
-      content: "";
-      position: absolute;
-      background: #fff;
-    }
-    .gift-box:before {
-      width: 20px;
-      height: 120px;
-      left: 50px;
-    }
-    .gift-box:after {
-      width: 120px;
-      height: 20px;
-      top: 50px;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-
-    /* Surprise Message */
-    .message {
-      font-size: 40px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
-      display: none;
-      animation: glow 1.5s infinite alternate, rotate 8s linear infinite;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #ff4081, 0 0 20px #ff80ab, 0 0 30px #f50057; }
-      to { text-shadow: 0 0 20px #ff4081, 0 0 40px #ff80ab, 0 0 60px #f50057; }
-    }
-    @keyframes rotate {
-      0% { transform: rotateY(0deg); }
-      100% { transform: rotateY(360deg); }
-    }
-
-    /* Cake */
-    .cake {
-      width: 80px;
-      height: 60px;
-      background: #6a1b9a;
-      border-radius: 10px;
-      margin: 20px auto;
-      position: relative;
-      display: none;
-    }
-    .candle {
-      width: 8px;
-      height: 30px;
-      background: #fff;
-      margin: auto;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: -30px;
-    }
-    .flame {
-      width: 14px;
-      height: 14px;
-      background: orange;
-      border-radius: 50%;
-      margin: auto;
-      position: absolute;
-      left: 50%;
-      top: -15px;
-      transform: translateX(-50%);
-      animation: flicker 0.2s infinite alternate;
-    }
-    @keyframes flicker {
-      from { transform: translateX(-50%) scale(1); opacity: 1; }
-      to { transform: translateX(-50%) scale(1.2); opacity: 0.6; }
-    }
-
-    /* Balloons */
-    .balloon {
-      width: 40px;
-      height: 50px;
-      border-radius: 50%;
-      position: absolute;
-      bottom: -100px;
-      animation: float 6s linear infinite;
-    }
-    @keyframes float {
-      from { transform: translateY(100vh); }
-      to { transform: translateY(-120vh); }
-    }
-
-    /* Typewriter */
-    .typewriter {
-      font-size: 20px;
-      width: 22ch;
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid white;
-      animation: typing 5s steps(22), blink 0.5s step-end infinite alternate;
-      margin-top: 20px;
-      display: none;
-    }
-    @keyframes typing {
-      from { width: 0; }
-    }
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    /* Confetti */
-    .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background: red;
-      animation: confettiFall 3s linear forwards;
-    }
-    @keyframes confettiFall {
-      from { transform: translateY(-10px) rotate(0deg); }
-      to { transform: translateY(100vh) rotate(720deg); }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Talha — Happy Birthday (Hacker Edition)</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Matrix / code rain canvas -->
+  <canvas id="matrixCanvas" class="matrix"></canvas>
 
-  <div class="gift-box" onclick="openGift()"></div>
-  
-  <div class="message">🎉 Happy Birthday Faheem 🎉</div>
-  
-  <div class="cake">
-    <div class="candle"></div>
-    <div class="flame"></div>
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="badge">TZ</div>
+      <h1 class="glow">Happy Birthday — Talha Zaffar</h1>
+      <p class="subtitle">Initializing celebration protocol... <span class="blip">▮</span></p>
+
+      <div class="controls">
+        <div id="giftBox" class="gift">🎁 OPEN GIFT</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- main long-scroll content -->
+  <main id="main">
+    <section class="panel">
+      <h2>Boot Sequence</h2>
+      <p>System initializing messages: friends connecting, cake warming, jokes compiling...</p>
+    </section>
+
+    <section class="panel">
+      <h2>Memory Dump</h2>
+      <p>All your wins, all the midnight scripts, all the times you fixed a bug — loaded here for inspection. Spoiler: lots of laughter logs.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Patch Notes</h2>
+      <p>vTalha.2025: fixed procrastination; improved cake-handling; added 'UnlimitedSmiles' module; performance: +100% on fun.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Tribute</h2>
+      <p>From peers: thanks for sharing notes, memes, and patience. From me (Rana): thanks for being you.</p>
+    </section>
+
+    <section class="panel finale">
+      <h2>Finale</h2>
+      <p>Ready for fireworks? Scroll to the end — celebration will auto-engage when you reach the finale.</p>
+    </section>
+  </main>
+
+  <!-- modal with typewriter wish -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Birthday Wish">
+    <div class="modal-card">
+      <button id="closeBtn" class="close" aria-label="Close">✕</button>
+      <h2>💌 A  Wish for Talha</h2>
+      <pre id="typewriter" class="typewriter" aria-live="polite"></pre>
+    </div>
   </div>
 
-  <div class="typewriter">Wishing you joy, love & success!  💖</div>
+  <!-- center popups container -->
+  <div id="popupContainer" class="popup-container" aria-hidden="true"></div>
 
-  <!-- Music -->
-  <audio id="music" src="https://www.bensound.com/bensound-music/bensound-buddy.mp3"></audio>
+  <!-- confetti holder -->
+  <div id="confettiWrap"></div>
 
-  <script>
-    function openGift() {
-      document.querySelector('.gift-box').style.display = 'none';
-      document.querySelector('.message').style.display = 'block';
-      document.querySelector('.cake').style.display = 'block';
-      document.querySelector('.typewriter').style.display = 'block';
-
-      // Play music
-      document.getElementById('music').play();
-
-      // Balloons
-      for (let i = 0; i < 15; i++) {
-        let balloon = document.createElement('div');
-        balloon.className = 'balloon';
-        balloon.style.left = Math.random() * 100 + "vw";
-        balloon.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        balloon.style.animationDuration = (5 + Math.random() * 5) + "s";
-        document.body.appendChild(balloon);
-      }
-
-      // Confetti
-      for (let i = 0; i < 50; i++) {
-        let confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        confetti.style.animationDuration = (2 + Math.random() * 3) + "s";
-        document.body.appendChild(confetti);
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
