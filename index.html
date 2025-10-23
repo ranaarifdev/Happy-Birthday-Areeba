@@ -3,69 +3,245 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Talha — Happy Birthday (Hacker Edition)</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Happy Birthday — Areeba 💻🎉</title>
+  <style>
+    /* --- Base Styling --- */
+    body {
+      margin: 0;
+      background: #000;
+      color: #0f0;
+      font-family: "Courier New", monospace;
+      overflow-x: hidden;
+    }
+
+    .matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 60px;
+    }
+
+    .glow {
+      font-size: 2.8em;
+      color: #00ff9d;
+      text-shadow: 0 0 20px #00ff9d, 0 0 40px #00ff9d;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from { text-shadow: 0 0 10px #00ff9d; }
+      to { text-shadow: 0 0 30px #00ff9d, 0 0 60px #00ff9d; }
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #00ffcc;
+    }
+
+    .controls {
+      margin-top: 40px;
+    }
+
+    .gift {
+      display: inline-block;
+      background: #111;
+      color: #0f0;
+      padding: 15px 25px;
+      border: 2px solid #0f0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .gift:hover {
+      background: #0f0;
+      color: #000;
+      box-shadow: 0 0 20px #0f0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .panel {
+      background: rgba(0, 255, 150, 0.05);
+      border: 1px solid #0f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #00ff9d;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-card {
+      background: #000;
+      border: 2px solid #00ff9d;
+      border-radius: 12px;
+      padding: 25px;
+      width: 80%;
+      max-width: 600px;
+      text-align: left;
+      color: #00ffcc;
+      box-shadow: 0 0 30px #00ff9d;
+    }
+
+    .close {
+      float: right;
+      border: none;
+      background: transparent;
+      color: #00ffcc;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    .typewriter {
+      white-space: pre-wrap;
+      overflow: hidden;
+      font-size: 1.1em;
+      border-left: 2px solid #0f0;
+      padding-left: 8px;
+      animation: typing 5s steps(50, end);
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+  </style>
 </head>
 <body>
-  <!-- Matrix / code rain canvas -->
   <canvas id="matrixCanvas" class="matrix"></canvas>
 
-  <!-- Hero -->
-  <header class="hero" id="hero">
-    <div class="hero-inner">
-      <div class="badge">TZ</div>
-      <h1 class="glow">Happy Birthday — Talha Zaffar</h1>
-      <p class="subtitle">Initializing celebration protocol... <span class="blip">▮</span></p>
+  <header class="hero">
+    <h1 class="glow">🎉 Happy Birthday — Areeba 💖</h1>
+    <p class="subtitle">Initializing Friendship Protocol... <span class="blip">▮</span></p>
 
-      <div class="controls">
-        <div id="giftBox" class="gift">🎁 OPEN GIFT</div>
-      </div>
+    <div class="controls">
+      <div id="giftBox" class="gift">🎁 OPEN MESSAGE</div>
     </div>
   </header>
 
-  <!-- main long-scroll content -->
-  <main id="main">
+  <main>
     <section class="panel">
-      <h2>Boot Sequence</h2>
-      <p>System initializing messages: friends connecting, cake warming, jokes compiling...</p>
+      <h2>System Log 1 — Connection Established</h2>
+      <p>Friendship between <strong>Arif.exe</strong> and <strong>Areeba.sys</strong> initiated successfully.  
+      Data Transfer: Trust = 100%, Laughter = Unlimited, Care = Constant.</p>
     </section>
 
     <section class="panel">
-      <h2>Memory Dump</h2>
-      <p>All your wins, all the midnight scripts, all the times you fixed a bug — loaded here for inspection. Spoiler: lots of laughter logs.</p>
+      <h2>System Log 2 — Emotional Firewall</h2>
+      <p>Areeba detected as a safe and secure connection. No bugs, no malware — only pure kindness and understanding.</p>
     </section>
 
     <section class="panel">
-      <h2>Patch Notes</h2>
-      <p>vTalha.2025: fixed procrastination; improved cake-handling; added 'UnlimitedSmiles' module; performance: +100% on fun.</p>
-    </section>
-
-    <section class="panel">
-      <h2>Tribute</h2>
-      <p>From peers: thanks for sharing notes, memes, and patience. From me (Rana): thanks for being you.</p>
+      <h2>System Log 3 — Friendship Uptime</h2>
+      <p>Even when offline, our bond stays online 24/7. Distance = variable, but connection strength = MAX.</p>
     </section>
 
     <section class="panel finale">
-      <h2>Finale</h2>
-      <p>Ready for fireworks? Scroll to the end — celebration will auto-engage when you reach the finale.</p>
+      <h2>System Log 4 — Final Patch</h2>
+      <p>Patch vAreeba.2025:  
+      Added: More Happiness 🌸  
+      Fixed: Sadness Bugs 😄  
+      Optimized: Friendship Module for Lifetime Performance 💚</p>
     </section>
   </main>
 
-  <!-- modal with typewriter wish -->
-  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Birthday Wish">
+  <!-- Modal -->
+  <div id="modal" class="modal">
     <div class="modal-card">
-      <button id="closeBtn" class="close" aria-label="Close">✕</button>
-      <h2>💌 A  Wish for Talha</h2>
-      <pre id="typewriter" class="typewriter" aria-live="polite"></pre>
+      <button id="closeBtn" class="close">✕</button>
+      <h2>💌 A Special Wish from Arif 💌</h2>
+      <pre id="typewriter" class="typewriter"></pre>
     </div>
   </div>
 
-  <!-- center popups container -->
-  <div id="popupContainer" class="popup-container" aria-hidden="true"></div>
+  <script>
+    // --- Matrix code rain effect ---
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
 
-  <!-- confetti holder -->
-  <div id="confettiWrap"></div>
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+    const font_size = 14;
+    const columns = canvas.width / font_size;
+    const drops = Array(Math.floor(columns)).fill(1);
 
-  <script src="script.js"></script>
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#0F0";
+      ctx.font = font_size + "px Courier New";
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * font_size, drops[i] * font_size);
+        if (drops[i] * font_size > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      }
+    }
+    setInterval(draw, 35);
+
+    // --- Modal control ---
+    const modal = document.getElementById('modal');
+    const giftBox = document.getElementById('giftBox');
+    const closeBtn = document.getElementById('closeBtn');
+    const typewriter = document.getElementById('typewriter');
+
+    const message = `Dear Areeba 💖
+
+You are not just a friend — you are a beautiful part of my life.
+You listen, you care, and you always make everything feel better.
+Even if we don’t meet every day, our bond remains unbreakable.
+I respect you, trust you, and thank Allah for giving me a friend like you.
+
+May your every code compile without errors,
+may your heart be free of bugs,
+and may Allah bless you with endless happiness and success. 🌸
+
+— From your friend, Arif 💻`;
+
+    giftBox.onclick = () => {
+      modal.style.display = "flex";
+      typewriter.textContent = "";
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i < message.length) {
+          typewriter.textContent += message.charAt(i);
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 40);
+    };
+
+    closeBtn.onclick = () => modal.style.display = "none";
+  </script>
 </body>
 </html>
